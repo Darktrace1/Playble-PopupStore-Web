@@ -7,7 +7,10 @@ import Basket from "./pages/basket";
 import { useState } from "react";
 
 function App() {
+  // 상품에 관한 변수 선언
   const [products, setProducts] = useState([]);
+  // 장바구니에 관한 변수 선언
+  const [cart, setCart] = useState([]);
 
   // 이 함수(convertPrice)는 앱 전체에서 쓸거니까 App.jsx 에 선언했다.
   const convertPrice = (price) => {
@@ -16,7 +19,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <TopNavigationBar />
+      <TopNavigationBar cart={cart} />
       <Routes>
         <Route
           path="/"
@@ -30,9 +33,20 @@ function App() {
         />
         <Route
           path="/product/:id"
-          element={<Product convertPrice={convertPrice} />}
+          element={
+            <Product
+              convertPrice={convertPrice}
+              cart={cart}
+              setCart={setCart}
+            />
+          }
         />
-        <Route path="/cart" element={<Basket />} />
+        <Route
+          path="/cart"
+          element={
+            <Basket cart={cart} setCart={setCart} convertPrice={convertPrice} />
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
