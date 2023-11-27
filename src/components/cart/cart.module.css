@@ -146,8 +146,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #c4c4c4;
-  border-top:none;
-  border-bottom:none;
+  border-top: none;
+  border-bottom: none;
 }
 
 .cart_product_count .count span {
@@ -167,6 +167,28 @@
   cursor: pointer;
 }
 
+/* 새롭게 추가한 css */
+.styles.parent_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 방향 중앙 정렬 */
+}
+
+.price_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price_info p {
+  margin-bottom: 10px;
+  font-size: 16px; /* 또는 필요에 따라 조절 */
+  font-weight: bold;
+  line-height: 23px;
+  color: #000000; /* 색상은 필요에 따라 변경 가능 */
+}
+
 .cart_product_price {
   display: flex;
   flex-direction: column;
@@ -181,13 +203,13 @@
 }
 
 .cart_product_price .btn_submit {
-  width: 130px;
-  height: 40px;
+  width: 100px;
+  height: 30px;
   background: #19ce60;
   border-radius: 5px;
   border: none;
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 20px;
   color: #ffffff;
 }
@@ -224,24 +246,25 @@
   margin: 0 auto;
   margin-top: 35px;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr) repeat(2, 2fr);
   place-items: center;
 }
 
 .total p,
-.total div,
+/* .total div, */
 .total img {
   background: #f2f2f2;
 }
 
-.total .total_price, 
+.total .total_price,
 .total .sale,
 .total .delivery,
-.total .payment {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+.total .payment,
+.total .btn_total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .total_price .cart_product_total_price,
@@ -299,7 +322,7 @@
   background: #ffffff;
 }
 
-.payment .cart_prouct_payment {
+.payment .cart_product_payment {
   font-size: 16px;
   font-weight: bold;
   line-height: 20px;
@@ -307,13 +330,56 @@
   margin-bottom: 12px;
 }
 
-.payment .cart_prouct_payment_price {
+.payment .cart_product_payment_price {
   font-size: 36px;
   font-weight: bold;
   line-height: 30px;
   color: #eb5757;
 }
 
+.btn_total {
+  width: 1280 px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 0px;
+}
+
+.btn_total .btn_total_submit {
+  margin: 0 auto;
+  width: 220px;
+  height: 68px;
+  background: #19ce60;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.order_span_wrap {
+  display: flex;
+  margin: 0 auto;
+  background: none;
+}
+.order_span {
+  margin-right: 5px;
+  background-color: #19ce60;
+}
+
+.btn_total .btn_total_count {
+  width: 28px;
+  height: 28px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+}
 .btn {
   width: 1280px;
   display: flex;
@@ -426,7 +492,7 @@
   .total_price .cart_product_total_price,
   .sale .cart_product_sale,
   .delivery .cart_product_delivery,
-  .payment .cart_prouct_payment {
+  .payment .cart_product_payment {
     font-size: 14px;
   }
 
@@ -436,7 +502,7 @@
     font-size: 18px;
   }
 
-  .payment .cart_prouct_payment_price {
+  .payment .cart_product_payment_price {
     font-size: 24px;
   }
 }

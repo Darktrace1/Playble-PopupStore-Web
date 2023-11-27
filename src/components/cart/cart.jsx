@@ -19,6 +19,9 @@ export const Cart = ({
   // 장바구니에서 선택된 상품의 가격을 위한 변수
   const [total, setTotal] = useState(0);
 
+  // 장바구니에서 선택된 상품의 갯수를 위한 변수
+  const [totalCount, setTotalCount] = useState(0);
+
   // 장바구니에서 수량 조절하는 함수
   const handleQuantity = (type, id, quantity) => {
     const found = cart.filter((el) => el.id === id)[0];
@@ -110,6 +113,8 @@ export const Cart = ({
           convertPrice={convertPrice}
           total={total}
           setTotal={setTotal}
+          totalCount={totalCount}
+          setTotalCount={setTotalCount}
           found={found}
           cart={cart}
         />
