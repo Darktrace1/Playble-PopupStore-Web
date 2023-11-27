@@ -41,20 +41,6 @@
       "provider": "보물보따리",
       "price": 69000,
       "image": "/images/image006.png"
-    },
-    {
-      "id": 7,
-      "name": "문 긁는 고양이",
-      "provider": "집",
-      "price": 1000000,
-      "image": "/images/image007.png"
-    },
-    {
-      "id": 8,
-      "name": "우당탕탕 인테리어 책",
-      "provider": "우당탕탕",
-      "price": 5900,
-      "image": "/images/image008.png"
     }
   ]
 }

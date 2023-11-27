@@ -6,7 +6,7 @@ export const EventBanner = () => {
       className={styles.banner}
       style={{
         backgroundImage: "url(/images/event.png",
-        backgroundSize: "100%",
+        // backgroundSize: "100%",
       }}
     >
       <div className={styles.right}>
