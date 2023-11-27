@@ -11,6 +11,8 @@ function App() {
   const [products, setProducts] = useState([]);
   // 장바구니에 관한 변수 선언
   const [cart, setCart] = useState([]);
+  // 장바구니에서 물건 체크
+  const [checkLists, setCheckLists] = useState([]);
 
   // 이 함수(convertPrice)는 앱 전체에서 쓸거니까 App.jsx 에 선언했다.
   const convertPrice = (price) => {
@@ -44,7 +46,13 @@ function App() {
         <Route
           path="/cart"
           element={
-            <Basket cart={cart} setCart={setCart} convertPrice={convertPrice} />
+            <Basket
+              cart={cart}
+              setCart={setCart}
+              convertPrice={convertPrice}
+              checkLists={checkLists}
+              setCheckLists={setCheckLists}
+            />
           }
         />
       </Routes>
